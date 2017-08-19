@@ -1,5 +1,35 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .wrapper
+    .header 
+     .wrapper
+        .headerButton image
+        .headerButton one
+        .headerButton two 
+
+    .login 
+      form(action="/users/login" method="POST")
+        input(type="text" name="login" placeholder="login")
+        input(type="text" name="password" placeholder="password")
+        button(type="submit") Login
+      br
+      br 
+      a(href="/users/") Create New User
+      br
+    .logOut.hidden
+        a(href="/users/logout") Logout
+    
+    .contentContainer
+      .wrapper2
+        .left 
+          #loginImage
+            img(src="../images/kellyAtConfr.jpg")
+        .right
+          .content Aliquam aliquet, leo viverra tempus finibus, nisl ipsum mattis est, eu sagittis eros lacus ut nibh. Integer pellentesque, massa id efficitur accumsan, ligula sapien egestas neque, id placerat neque mauris sed sapien. Mauris consectetur ante tincidunt auctor cursus. Vestibulum venenatis velit sit amet est laoreet, aliquam aliquam justo hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut convallis mi eu dolor facilisis sagittis. 
+          .commentbox 
+          .commentBar.hidden
+            form(id="commentForm" action="/comments/" method="POST")
+              input(class="commentField" type="text" placeholder="Comment" id="commentField" name="commentField")
+              button(class="commentButton" type="submit") Submit Comment
+        

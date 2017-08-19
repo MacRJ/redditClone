@@ -10,10 +10,69 @@ a {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 1em;
   grid-auto-rows: minmax(100px, auto);
 }
 .header {
+  display: inline;
   grid-column: 1/4;
   grid-row: 1;
+  background-color: lightblue;
+}
+
+.headerButton {
+  padding-top: 7vh;
+  padding-left: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 2vh;
+}
+.login {
+  grid-column: 3/4;
+  grid-row: 2;
+
+}
+.logOut {
+  grid-column: 3/4;
+  grid-row: 2;
+}
+.contentContainer {
+  grid-column: 1/3;
+  grid-row: auto;
+
+}
+.newUser {
+  grid-column: 2/3;
+  grid-row: 2;
+  background-color: lightgrey;
+}
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(auto, 100px);
+}
+.left {
+
+}
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+.content {
+  margin-bottom: 1em;
+
+}
+.commentbox {
+}
+.commentBar {
+  margin-top: 1em;
+}
+#loginImage {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  background-color: yellow;
+}
+.hidden {
+  visibility: hidden;
 }
